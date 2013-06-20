@@ -1,0 +1,113 @@
+/*
+Description: DailyLit Blog
+*/
+
+
+
+/* Begin Typography & Colors */
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input {margin: 0; padding: 0;}
+ul {list-style: none;}
+fieldset {border: 0;}
+a,a:link,a:hover, a:visited {text-decoration: none; color: #29b;}
+a:focus,a:hover {text-decoration: underline;}
+a img {border: 0;}
+.clear {clear: both;}
+
+#blog {background-color: #ddd; margin: 0; padding: 0;}
+#blog .container {position: relative; width: 960px; margin: 20px auto; background: #fff url(images/blog-header-tile.gif) left top repeat-x; height: auto; overflow: hidden; }
+#blog h2.pagetitle {position: absolute; top: 98px; left: 280px; font: normal 18px/20px Georgia, "Times New Roman", serif; margin: 0; padding: 0; border: none;}
+
+#header {height: 45px; }
+#header .logo { width: 281px; height: 40px; float: left; }
+#subsearchbox {width: 320px; height: 25px; background: #fff url(http://www.dailylit.com/images/masthead-pointer-bg.gif) -12px -2px no-repeat; float: right; margin: 8px 40px 0;}
+#searchform label {padding-left: 13px; float: left; width: 60px; height: 25px; display: block; color: #543; font: italic 12px/25px Georgia, "Times New Roman", serif;}
+#searchform input {border: 0;}
+#searchform input#s {width: 210px; height: 17px; float: left; color: #ccc; font: 12px/17px Georgia, sans-serif; margin-top: 6px;}
+#searchform input#searchsubmit {width: 34px; height: 29px; float: left; margin-top: -2px;}
+ 
+#sidebar { width: 200px; float: left; margin: 55px 0 0 20px; }
+#sidebar .homelink { padding-bottom: 10px; background: url(images/blog-long-arrow.gif) left bottom no-repeat; font: 16px/18px Georgia, "Times New Roman", serif;}
+#sidebar .homelink .home {padding-left: 28px; background: url(images/blog-home-icon.gif) 10px 4px no-repeat;}
+#sidebar .homelink .home em {font-style: italic; color: #665;}
+#sidebar h3 {font: normal 16px/18px Georgia, "Times New Roman", serif; margin: 50px 0 10px;}
+#sidebar .widget_recent_entries li {height: 1%;}
+#sidebar .widget_recent_entries li a {display: block; background: url(images/blog-arrowhead.gif) 0 2px no-repeat; font: 12px/15px Georgia, "Times New Roman", serif; color: #221; padding-left: 20px; margin-bottom: 4px; }
+#sidebar .categories li, #sidebar .widget_categories li, #sidebar .widget_archive li {height: 1%; position: relative; margin-bottom: 4px; font: 12px/15px Arial, Helvetica, sans-serif;color: #29b;}
+#sidebar .categories li a,  #sidebar .widget_categories li a, #sidebar .widget_archive li a {padding-right: 4px; background: #fff;}
+#sidebar .categories li a.num,  #sidebar .widget_categories li a.num #sidebar .widget_archive li a.num {padding-left: 4px; padding-right: 0; position: absolute; right: 0; top: 0;}
+#sidebar .feeds li a { font: 12px/15px Arial, sans-serif; padding-left: 18px; background: url(images/blog-rss-icon.gif) no-repeat; }
+
+#main-content { width: 640px; margin: 79px 0 350px 60px; float: left; }
+#main-content h2 { clear: both; font: normal 32px/34px Georgia, "Times New Roman", serif; padding: 18px 0 10px; margin-bottom: 28px; border-top: 2px solid #000; border-bottom: 1px solid #999; }
+#main-content h2 a { color: #000}
+#main-content p { font: 14px/19px Georgia, Helvetica, Arial, sans-serif; margin-bottom: 12px; padding-right: 80px;}
+#main-content img {float: left; margin: 0 10px 10px 0; }
+#main-content blockquote { background: url(images/blog-blockquote-divider.gif) no-repeat; padding: 65px 30px 12px; }
+#main-content blockquote blockquote {padding: 65px 30px 12px 60px; }
+#main-content blockquote blockquote p {font: italic 14px/19px Georgia, "Times New Roman", serif; color: #654;}
+#main-content h3 { font: bold 11px/19px "Trebuchet MS", sans-serif; letter-spacing: .1em; color: #600; margin: 30px 0 8px 0; text-transform: uppercase;}
+#main-content h4 { font: italic 20px/22px Georgia, "Times New Roman", serif; color: #654; margin-bottom: 20px;}
+#main-content ul.postmedatada { margin: 30px 0 60px; height: auto; width: 640px; overflow: hidden; border-top: 1px solid #000; border-bottom: 1px solid #999; float: left;}
+#main-content ul.postmedatada li {float: left; font: bold 11px/14px  Arial, sans-serif; height: auto; overflow: hidden; width: 160px; padding: 14px 10px 10px 0;}
+#main-content ul.postmedatada li.byline {border-top: 1px solid #000; width: 222px; font-weight: normal;}
+#main-content ul.postmedatada li.categories { width: 210px;}
+#main-content ul.postmedatada li a, #main-content ul.postmedatada li a:visited, #main-content ul.postmedatada .author { color: #29b; font-weight: bold; }
+#main-content ul.postmedatada li a img { float: left; margin-right: 8px; width: 30px; height: 30px; border: 1px solid #000;}
+#main-content ol { padding-left: 23px;}
+#main-content .pagenav {height: auto; overflow: hidden; clear: both; }
+#main-content .previous { background: url(images/blog-next-prev-arrows.gif) left -46px no-repeat; float: left; font: 15px/19px Georgia, "Times New Roman", serif; color: #ccc; padding: 0 15px 0 50px;}
+#main-content .next { background: url(images/blog-next-prev-arrows.gif) right -146px no-repeat; float: left; font: 15px/19px Georgia, "Times New Roman", serif; color: #ccc; padding: 0 50px 0 15px; }
+#main-content .previous.on {background: url(images/blog-next-prev-arrows.gif) left 4px no-repeat; color: #29b;}
+#main-content .next.on {background: url(images/blog-next-prev-arrows.gif) right -95px no-repeat;  color: #29b; float: right;}
+
+#comment-wrapper { position: relative; clear: both; height: auto; overflow: hidden;}
+#comment-wrapper h3 { font: normal 20px/22px Georgia, "Times New Roman", serif; width: 400px; float: left; text-transform: none; letter-spacing: normal; color: #000; margin: 0 0 3px; }
+#comment-wrapper .comment-btn {font: bold 11px/15px Arial, sans-serif; float: left; width: 96px; margin-top: 8px; background: url(images/blog-add-icon.gif) no-repeat; padding-left: 18px;}
+#comment-wrapper .feed-btn { font: bold 11px/15px Arial, sans-serif; float: right; width: 92px; margin-top: 8px; background: url(images/blog-rss-icon.gif) left 2px no-repeat; padding-left: 18px;}
+#comment-wrapper #comment-listing { height: auto; overflow: hidden; border-bottom: none; padding: 0; margin: 0;}
+#comment-wrapper #comment-listing li { width: 640px; padding: 20px 0; margin: 0; border-bottom: 1px solid #000; }
+#comment-wrapper #comment-listing .comment-text { width: 370px; border: none; float: left; padding: 0; margin-right: 30px;}
+#comment-wrapper #comment-listing .byline {float: left; font: 11px/14px Arial, sans-serif; width: 200px; color: #654;}
+#comment-wrapper #comment-listing .byline .author { color: #29b; font-weight: bold; }
+
+#commentform { width: 540px; padding: 25px 0 25px 100px; margin: 20px 0; background-color: #eee; }
+#commentform p {font: bold 12px/15px Helvetica, Arial, sans-serif;}
+#commentform label { display: block; margin: 0 0 3px; padding: 0; }
+#commentform p em { font-weight: normal; color: #444; font-style: normal; }
+#commentform input { width: 234px; height: 18px; border: none; padding: 3px 3px 0; font: 14px/16px Helvetica, Arial, sans-serif; } 
+#commentform input#url { width: 424px; }
+#commentform textarea#comment {width: 424px; height: 59px; border: none; padding: 3px 3px 0; font: 12px/15px Helvetica, Arial, sans-serif;}
+#commentform input.button { background: #ac1 url(images/blog-add-icon.gif) 8px 8px no-repeat; width: auto; height: 31px; font: bold 16px/31px Helvetica, Arial, sans-serif; color: #fff; padding: 0 12px 0 24px; border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; }
+#comments .fineprint {font: 11px/13px Arial, sans-serif;}
+
+#blog #footer {clear: both; font: 11px/40px Arial, sans-serif; color: #cba; height: 40px; overflow: hidden; background-color: #655; text-align: center;}
+.navigation .alignleft {
+	float: left;
+	width: 48%;
+	text-align: right;
+	border-right: 1px solid #ccc;
+	padding-right: 10px;
+}
+.navigation .alignleft a {
+	display: block;
+	padding-left: 35px;
+	background: url(images/blog-next-prev-arrows.gif) left -46px no-repeat;
+	width: 100px;
+	float:right;
+}
+.navigation .alignleft a:hover {
+	background: url(images/blog-next-prev-arrows.gif) left 4px no-repeat;
+}
+.navigation .alignright {
+	float: left;
+	padding-left: 10px;
+}
+.navigation .alignright a {
+	display: block;
+	padding-right: 35px;
+	background: url(images/blog-next-prev-arrows.gif) right -146px no-repeat;
+	width: 90px;
+}
+.navigation .alignright a:hover {
+	background: url(images/blog-next-prev-arrows.gif) right -96px no-repeat;
+}
